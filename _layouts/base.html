@@ -1,70 +1,44 @@
 <!doctype html>
 <head>
 	<meta charset="utf-8">
-	<title>Matthew Owen</title>
-	<meta name="author" content="Matthew Owen" />
-	<link href="/home/matthew/programming/personal-site/static/styles.css" rel="stylesheet" media="screen" type="text/css />"
+	<title>{{ page.title }}</title>
+	<meta name="author" content="Matthew Owen">
+	<link href="/static/styles.css" rel="stylesheet" media="screen" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<header>
-		<section>
-			<a>
-				<h1>Matthew Owen</h1>
-				<h2>Tech, the internet, etc</h2>
-			</a>
+		<div>
+			<h1><a href="/">matthew owen</a></h1>
 			<nav>
 				<ul>
-					<li>Blog</li>
-					<li>About</li>
-					<li>Twitter</li>
+					<li id="twitter"><a href="http://twitter.com/_mattowen">Twitter</a></li>
+					<li id="github"><a href="https://github.com/matthewowen">GitHub</a></li>
+					<li id="rss"><a href="/atom.xml">RSS</a></li>
 				</ul>
 			</nav>
-		<section>
+		<div>
 		<div class='clear'></div>
 	</header>
 
 	<section id="content">
-		<article>
-			<h2>Article title</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada placerat mi, tempor sodales quam fermentum et. Praesent lobortis viverra tortor non commodo. Donec iaculis porta dolor, vitae venenatis arcu condimentum at. Pellentesque ac massa quam. Nullam imperdiet orci ut erat elementum aliquet a et erat.</p>
-
-			<p>Praesent vel orci non purus cursus consectetur. Vivamus sed nisl eu lectus convallis tempor. Proin elit urna, venenatis eu tempus eu, aliquam vitae elit. Nulla facilisi. Phasellus metus purus, rhoncus eget consequat sagittis, commodo sit amet justo. Morbi id mauris porttitor tortor ullamcorper rhoncus. Pellentesque eget viverra lacus. Integer imperdiet congue erat quis hendrerit. Morbi vulputate pulvinar nunc. Nulla consectetur vulputate neque, eget tristique enim varius a. Nulla facilisi.</p>
-
-			<p>Mauris velit nisi, scelerisque non tincidunt sit amet, porttitor non tellus. Etiam quis magna leo. In in vehicula turpis. Duis vitae felis at erat faucibus facilisis. Aliquam non neque lectus. Duis iaculis dictum nibh quis iaculis.</p>
-
-			<ul>
-				<li>item 1</li>
-				<li>item 2</li>
-			</ul>
-
-			<ol>
-				<li>ordered 1</li>
-				<li>ordered 2</li>
-			</ol>
-		</article>
-
+			{{ content }}
 		<aside>
-			<section id="sidebar-last-post">
-			<a>
-				<h3>Last post</h3>
-				<p>Last post intro</p>
-			</a>
-			</section>
 
 			<section id="sidebar-projects">
-				<h3>Projects I've been working on</h3>
+				<h3>My Projects</h3>
 				<ul>
 					<li>
-						<a>
+						<a title="Oxford bus times" href="http://www.oxbus.co.uk">
 							<h4>OxBus</h4>
-							<p>Info about it</p>
+							<p>Live Oxfordshire bus times on your smartphone</p>
 						</a>
 					</li>
 					<li>
-						<a>
+						<a title="London bus times" href="http://londonb.us">
 							<h4>londonb.us</h4>
-							<p>Info about it</p>
+							<p>Easily find out when your next London bus is, right from your smartphone</p>
 						</a>
 					</li>
 				</ul>
@@ -75,23 +49,23 @@
 	</section>
 
 	<footer>
-		<section>
-			<div id="about-me">
-				<h3>About me</h3>
-				<p>Text here</p>
-				<a>More</a>
-			</div>
+		<div>
+			<section id="about-me">
+				<h3><a title="Matthew Owen" href="/about">About me</a></h3>
+				<p>Tech enthusiast: interested in Python, mobile web, geolocation, and how web technologies can improve interactions with physical services.</p>
+				<a title="Matthew Owen" href="/about">Read more...</a>
+			</section>
 
-			<div id="posts">
+			<section id="posts">
 				<h3>Archive</h3>
 				<ul>
-					<li><date>Date</date><a>Title of article</a></li>
-					<li><date>Date</date><a>Title of article</a></li>
-					<li><date>Date</date><a>Title of article</a></li>
-					<li><date>Date</date><a>Title of article</a></li>
+					{% for post in site.posts limit:5 %}
+					<li><time datetime="{{ post.date }}">{{ post.date | date_to_string }}:</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+					{% endfor %}
 				</ul>
-			</div>
-		</section>
+			</section>
+		</div>
+		<div class='clear'></div>
 	</footer>
 </body>
 </html>

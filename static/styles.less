@@ -26,7 +26,6 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	@link: #CEAC41;
 	@livery-text: #DAC27C;
 
-
 // structure
 
 html {
@@ -35,31 +34,64 @@ html {
 
 body {
 	color: @text;
-	font-family: "Gill Sans MT", "Gill Sans", sans-serif;
+	font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
 header {
 	background-color: @livery;
 	color: @livery-text;
+	height: 4em;
 
-	section {
+	div {
 		.sizer
+	}
+
+	h1 {
+		color: @livery-text;
+		padding: 0 (@gutter * 2);
 	}
 
 	a {
 		float: left;
+		color: @livery-text;
 	}
 }
 
 nav {
 	background-color: @livery;
 	color: @livery-text;
-	width: @aside;
 	float: right;
-	padding: @gutter * 2;
+	height: 4em;
 
 	li {
-		font-size: 1.5em;
+		font-size: 1.2em;
+		float: left;
+		padding: 1.2em (@gutter * 2);
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	.bg {
+		background-repeat: no-repeat;
+		background-position: center left;
+		padding-left: 40px;
+	}
+
+	li#rss {
+		background-image: url(/static/img/rss.png);
+		.bg
+	}
+
+	li#twitter {
+		background-image: url(/static/img/twitter.png);
+		.bg
+	}
+
+	li#github {
+		background-image: url(/static/img/github.png);
+		.bg
 	}
 }
 
@@ -78,6 +110,23 @@ aside {
 	float: right;
 	padding: (@gutter * 2) - 2px;
 	border-left: solid 2px @border;
+	color: @livery;
+
+	section {
+		margin: 1em;
+
+		a {
+			margin: 1em;
+
+			h4 {
+				text-decoration: underline;
+			}
+
+			p {
+				font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+			}
+		}
+	}
 }
 
 footer {
@@ -85,8 +134,42 @@ footer {
 	background-color: @livery;
 	color: @livery-text;
 
-	section {
+	div {
 		.sizer
+	}
+
+	a {
+		color: @livery-text;
+	}
+
+	section#about-me {
+		width: @aside - (@gutter * 4);
+		float: right;
+		padding: @gutter * 2;
+		margin: 0 (@gutter * 2);
+
+		p {
+			margin: 0.2em 0;
+		}
+	}
+
+	section#posts {
+		width: @article;
+		float: left;
+		padding: @gutter * 2;
+
+		li {
+			font-family: 'Cantarell', sans-serif;
+
+			a {
+				text-decoration: underline;
+			}
+
+			time {
+				font-style: normal;
+				padding-right: @gutter * 2;
+			}
+		}
 	}
 }
 
@@ -98,25 +181,36 @@ div.clear {
 
 h1 {
 	font-size: 3em;
+	font-family: 'Cantarell', sans-serif;
 }
 
 h2 {
 	font-size: 2em;
+	font-family: 'Cantarell', sans-serif;
 }
 
 h3 {
 	font-size: 1.5em;
+	font-family: 'Cantarell', sans-serif;
 }
 
 h4 {
-	font-size: 1em;
+	font-size: 1.2em;
+	font-family: 'Cantarell', sans-serif;
 }
 
 h5 {
 	font-size: 1em;
+	font-family: 'Cantarell', sans-serif;
 }
 
 // text and lists 
+
+a {
+	color: @livery;
+	text-decoration: none;
+	font-family: 'Cantarell', sans-serif;
+}
 
 article {
 
