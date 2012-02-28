@@ -1,11 +1,12 @@
 ---
 layout: base
 ---
-<article class="post">
-<section class="crumb"><a href="/">&lt;&lt; back to index</a></section>
+<article id="post">
+<section id="crumb"><a href="/">&lt;&lt; back to index</a></section>
 <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
 <date>{{ page.date | date_to_string }}</date>
 {{ content }}
+<section id="comments">
 <h3>Speak your brains:</h3>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -20,4 +21,5 @@ layout: base
     })();
 </script>
 <noscript>I'm afraid commenting requires Javascript. Sorry about that.</a></noscript>
+</section>
 </article>
