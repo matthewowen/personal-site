@@ -18,12 +18,25 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 		margin: auto;
 	}
 
+	.transition {
+		transition: color 0.3s;
+		-webkit-transition: color 0.3s;
+		-o-transition: color 0.3s;
+
+		&:hover {
+			color: @hover;
+			transition: color 0.3s;
+			-webkit-transition: color 0.3s;
+			-o-transition: color 0.3s;
+		}
+	}
+
 	// colours
 	@body: #EFDEC2;
 	@livery: #A8651E;
 	@border: #D7AF72;
 	@text: black;
-	@link: #CEAC41;
+	@hover: #CEAC41;
 	@livery-text: #DAC27C;
 
 // structure
@@ -54,6 +67,7 @@ header {
 	a {
 		float: left;
 		color: @livery-text;
+		.transition
 	}
 }
 
@@ -106,6 +120,17 @@ article {
 
 	.crumb {
 		font-size: 0.8em;
+	}
+}
+
+#index {
+	.post {
+		border-bottom: 1px solid #A8651E;
+		margin-bottom: 2em;
+
+		&:last-child {
+			border-bottom: none;
+		}
 	}
 }
 
@@ -214,6 +239,7 @@ a {
 	color: @livery;
 	text-decoration: none;
 	font-family: 'Cantarell', sans-serif;
+	.transition
 }
 
 em {
@@ -221,7 +247,7 @@ em {
 }
 
 strong {
-	font-style: bold;
+	font-weight: bold;
 }
 
 article {
