@@ -54,6 +54,7 @@ header {
 	background-color: @livery;
 	color: @livery-text;
 	height: 4em;
+	display: block;
 
 	div {
 		.sizer
@@ -110,6 +111,7 @@ nav {
 }
 
 section#content {
+	display: block;
 	.sizer
 }
 
@@ -142,6 +144,7 @@ aside {
 	padding: (@gutter * 2) - 2px;
 	border-left: solid 2px @border;
 	color: @livery;
+	display: block;
 
 	section {
 		margin: 1em;
@@ -164,6 +167,7 @@ footer {
 	clear: both;
 	background-color: @livery;
 	color: @livery-text;
+	display: block;
 
 	div {
 		.sizer
@@ -196,7 +200,7 @@ footer {
 				text-decoration: underline;
 			}
 
-			time {
+			span {
 				font-style: normal;
 				padding-right: @gutter * 2;
 			}

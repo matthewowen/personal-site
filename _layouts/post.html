@@ -4,7 +4,7 @@ layout: base
 <article id="post">
 <section id="crumb"><a href="/">&lt;&lt; back to index</a></section>
 <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
-<date>{{ page.date | date_to_string }}</date>
+<span>{{ page.date | date_to_string }}</span>
 {{ content }}
 <section id="comments">
 <h3>Speak your brains:</h3>
@@ -20,6 +20,6 @@ layout: base
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>I'm afraid commenting requires Javascript. Sorry about that.</a></noscript>
+<noscript>I'm afraid commenting requires Javascript. Sorry about that.</noscript>
 </section>
 </article>
