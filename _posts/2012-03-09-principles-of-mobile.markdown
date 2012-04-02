@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Some thoughts on Mobile
-date: 2012-09-02T14:30:00.1Z
+date: 2012-03-09T14:30:00.1Z
 ---
 
 Last Wednesday, I spoke at [Oxford Geek Nights #25](http://oxford.geeknights.net/2012/feb-29th/) about [Oxbus: a mobile bus times site for Oxfordshire (that doesn't suck)](http://www.oxbus.co.uk).

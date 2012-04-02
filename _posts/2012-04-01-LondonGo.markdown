@@ -1,0 +1,13 @@
+---
+layout: post
+title: LondonGo
+date: 2012-04-01T19:30:00.1Z
+---
+
+As I've [written about before](http://www.matthew-owen.com/2012/03/09/principles-of-mobile/), I wrote a lightweight mobile site for [Oxford bus times](http://www.oxbus.co.uk). Not wanting to rest on any laurels, I created a mobile site for [London bus times](http://londonb.us), calling it londonb.us. 
+
+But, as we all know, the tube is pretty great in London, too. So over the past two weeks, I've been updating londonb.us to support live tube times too. Of course, this necessitates a new name (because it isn't just bus times), so it is now [LondonGo: live London bus and tube times for your mobile](http://www.londongo.net).
+
+I'll probably try to write up a bit about the technical background to LondonGo in the next few weeks, but the short lesson is really that in open data terms, TfL get good points for effort, poor points for execution. The data you need to produce a site like this is all available in some form, but none of it is joined up - the data for stop location uses one format to identify stops and lines, but the feed for live train times uses a different format. Which means half the battle is munging bad data into good data.
+
+Hopefully this is useful. Feedback is always welcome.
