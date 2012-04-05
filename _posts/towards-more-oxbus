@@ -1,0 +1,45 @@
+### Caching ###
+As mentioned above, the requests using BusScraper are pretty slow, so I want to avoid making them. Unfortunately, caching particular URLs is basically useless: each URL is specific to an exact location, and the cache needs to expire quickly (otherwise there isn't much point having live times).
+
+Instead, I'm caching the data that gets returned from BusScraper. My redis cache has a key - "bus.id" - that's got an integer value. Every time I make a request to BusScraper, I go through all the buses it has returned. For each one, I increment that key, then write a few new key-value pairs into redis to store the information about the bus. Each "bus.id" is then pushed into a redis list (with the key set as the stop's identifying code). Once I've done every bus, I set the list to expire after a minute (becuase it'll be out of date by then). Here's the code:
+
+	def retrieve_scraper(self):
+		"""
+		retrieve buses using busscraper.stop
+		add those buses to redis for next time
+		"""	
+		# scrape the info - just take the first ten buses
+		buses = stop(self.atco, "oxfordshire")[:10]
+		
+		# record data about each bus in redis
+		for bus in buses:
+			# increment the id counter so that the bus has a unique id
+			k = r.incr('bus.id')
+			# set keys for the info we've retrieved
+			r.set('bus:%d:service' % (k), bus['service'])
+			r.set('bus:%d:destination' % (k), bus['destination'])
+			r.set('bus:%d:minutes_to_departure' % (k), bus['minutes_to_departure'])
+			# put the id for the bus in this stops list of coming buses
+			r.lpush(self.atco, k)
+		
+		# set the key to expire in a minute
+		r.expire(self.atco, 60)
+
+		return buses
+
+This works nicely, because it caches on a per stop basis. This means that it is actually pretty useful - two people a mile away from each other could still get the same stop in their results and hence still get some benefit from the caching. Moreover, if you click through to get more details on a stop, the bus info has already been stored - this makes it feel a great deal quicker.
+
+### 
+
+### Bringing it together ###
+So, you've visited [http://www.oxbus.co.uk](http://www.oxbus.co.uk). It has found your location. It has forwarded you to a URL with your location in the path, and found the ten nearest stops.
+
+It'll then display the stops in a list. Javascript is used to show/hide the later buses for a given stop - getting them all at once doesn't add much page weight, and avoids potentially time consuming requests to the server (ping times on mobile can be truly dreadful). If you want to see stops that are further away, you can scroll down to the bottom of the page and tap to show more. This'll fire an AJAX request to add in the next ten stops - I setup a new URL . Being a glutton for punishment, I'm not using jQuery or anything similar for making the  - I didn't want the extra page weight of downloading a framework, most of which I won't use. I'd like to make my Javascript tidier than it is, but hey - wouldn't we all?
+
+### Mapping ###
+I started simple, but I always wanted to build it out more. The big step forward was introducing maps. By tapping 'show on map', you can see the stop's location on a map, and see directions from where you are to where the stop is. This makes it a little easier if you're out and about in an area that you aren't familiar with.
+
+Again, hooray for APIs. Maps use the Google Maps API, and directions use the Google Directions API. Both were a joy to use and took very little time to get up and working.
+
+### There you have it ###
+I had fun. It was interesting. I'm still looking for more things to make it more exciting. At some point, I plan to do it for other areas (and possibly build an integrated site covering as much of the country as possible).
