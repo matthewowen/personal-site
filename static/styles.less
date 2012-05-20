@@ -39,6 +39,10 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	@hover: #CEAC41;
 	@livery-text: #DAC27C;
 
+    // fonts
+    @main-font: 'Gill Sans', 'Gill Sans MT', 'Gill Sans W01 Medium', sans-serif;
+    @secondary-font: Futura-Medium, Futura W01 Medium, Futura, Arial, Sans-Serif;
+
 // structure
 
 html {
@@ -47,7 +51,7 @@ html {
 
 body {
 	color: @text;
-	font-family: 'Gill Sans', 'Gill Sans MT', 'Gill Sans W01 Medium', sans-serif;
+	font-family: @main-font;
 }
 
 header {
@@ -194,7 +198,7 @@ footer {
 		padding: @gutter * 2;
 
 		li {
-			font-family: 'Cantarell', sans-serif;
+			font-family: @secondary-font;
 
 			a {
 				text-decoration: underline;
@@ -216,27 +220,27 @@ div.clear {
 
 h1 {
 	font-size: 3em;
-	font-family: 'Cantarell', sans-serif;
+	font-family: @secondary-font;
 }
 
 h2 {
 	font-size: 2em;
-	font-family: 'Cantarell', sans-serif;
+	font-family: @secondary-font;
 }
 
 h3 {
 	font-size: 1.5em;
-	font-family: 'Cantarell', sans-serif;
+	font-family: @secondary-font;
 }
 
 h4 {
 	font-size: 1.2em;
-	font-family: 'Cantarell', sans-serif;
+	font-family: @secondary-font;
 }
 
 h5 {
 	font-size: 1em;
-	font-family: 'Cantarell', sans-serif;
+	font-family: @secondary-font;
 }
 
 // text and lists 
@@ -244,7 +248,6 @@ h5 {
 a {
 	color: @livery;
 	text-decoration: none;
-	font-family: 'Cantarell', sans-serif;
 	.transition
 }
 
