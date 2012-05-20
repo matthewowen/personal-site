@@ -4,7 +4,7 @@ title: Oxbus - getting times, getting locations
 date: 2012-04-02T21:00:00.1Z
 ---
 
-At the end of February, I spoke at [Oxford Geek Nights #25](http://oxford.geeknights.net/2012/feb-29th/) about [Oxbus: a mobile bus times site for Oxfordshire](http://www.oxbus.co.uk). Since then, I've written about [principles of the mobile web](/2012/04/01/LondonGo/). Here's why and how I built OxBus.
+At the end of February, I spoke at [Oxford Geek Nights #25](http://oxford.geeknights.net/2012/feb-29th/) about [Oxbus: a mobile bus times site for Oxfordshire](http://www.oxbus.co.uk). Since then, I've written about [principles of the mobile web](/2012/03/09/principles-of-mobile/). Here's why and how I built OxBus.
 
 You can get live bus times for Oxfordshire at [http://www.oxontime.com](http://www.oxontime.com). I think the fact that it is possible to get these times is fantastic, but I think it's really disappointing that the user experience on that site is so poor. It should be easy to get times for nearby stops.
 
