@@ -1,0 +1,66 @@
+@gutter: 10px;
+@body: #EFDEC2;
+@livery: #A8651E;
+@border: #D7AF72;
+@text: black;
+@hover: #CEAC41;
+@livery-text: #DAC27C;
+
+header div {
+    padding: 0 15px;
+    h1 a {
+        padding-left: @gutter;
+        float: left;
+        font-size: 1.5em;
+    }
+
+    nav {
+        width: 30%;
+        padding: 10px;
+        float: right;
+
+        ul {
+            padding: 25px 0;
+
+            li {
+                float: left;
+                margin: 5px 10px 5px 0;
+                padding-left: 45px;
+                background-size: 40px;
+                font-size: 1.4em;
+            }
+        }
+    }
+}
+
+section#content {
+    padding: 0 15px;
+}
+
+article {
+    width: 63%;
+    max-width: 780px;
+    float: left;
+}
+
+aside {
+    float: right;
+    width: 30%;
+    padding: 10px;
+}
+
+footer {
+    clear: both;
+    div {
+        padding: 0 15px;
+
+        section#about-me {
+            float: right;
+            width: 30%;
+        }
+        section#posts {
+            width: 63%;
+            max-width: 780px;
+        }
+    }
+}
