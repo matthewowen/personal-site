@@ -1,6 +1,6 @@
 @import url(/static/small.css) screen and (max-width:480px);
-@import url(/static/mid.css) screen and (max-width:800px) and (min-width:481px);
-@import url(/static/full.css) screen and (max-width:1200px) and (min-width:801px);
+@import url(/static/mid.css) screen and (max-width:760px) and (min-width:481px);
+@import url(/static/full.css) screen and (max-width:1200px) and (min-width:761px);
 @import url(/static/huge.css) screen and (min-width:1201px);
 html{color:#000;background:#ffffff;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
