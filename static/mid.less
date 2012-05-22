@@ -1,4 +1,3 @@
-@minwidth: 280px;
 @gutter: 10px;
 @body: #EFDEC2;
 @livery: #A8651E;
@@ -8,8 +7,6 @@
 @livery-text: #DAC27C;
 
 header div {
-    min-width: @minwidth;
-
     h1 a {
         padding-left: @gutter;
     }
@@ -30,12 +27,18 @@ header div {
 
 aside {
     float: right;
-    width: 30%;
+    width: 48%;
+
+    color: @livery-text;
+
+    a {
+        color: @livery-text;
+    }
 }
 
 footer {
     div {
         float: left;
-        width: 30%;
+        width: 48%;
     }
 }

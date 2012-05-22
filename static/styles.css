@@ -27,11 +27,11 @@ nav li#rss{background-image:url(/static/img/rss.png);background-repeat:no-repeat
 nav li#twitter{background-image:url(/static/img/twitter.png);background-repeat:no-repeat;background-position:center left;}
 nav li#github{background-image:url(/static/img/github.png);background-repeat:no-repeat;background-position:center left;}
 section#content{display:block;}
-article{float:left;padding:10px;}article #crumb{font-size:0.8em;}
+article{padding:10px;}article #crumb{font-size:0.8em;}
 #index .post{border-bottom:1px solid #A8651E;margin-bottom:2em;}#index .post .comment-count{margin-bottom:0.5em;display:block;margin-top:-0.5em;}
-aside{color:#a8651e;}aside section{margin:1em;}aside section a{margin:1em;}aside section a h4{text-decoration:underline;}
+aside section{margin:10px;}aside section a{margin:1em;}aside section a h4{text-decoration:underline;}
 aside section a p{font-family:'Gill Sans','Gill Sans MT',sans-serif;}
-footer{clear:both;background-color:#a8651e;color:#dac27c;display:block;}footer a{color:#dac27c;}
+footer{background-color:#a8651e;color:#dac27c;display:block;}footer a{color:#dac27c;}
 footer section#about-me{padding:10px;}footer section#about-me p{margin:0.2em 0;}
 footer section#posts{padding:10px;}footer section#posts li{font-family:Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}footer section#posts li a{text-decoration:underline;}
 footer section#posts li span{font-style:normal;padding-right:10px;}
@@ -47,3 +47,6 @@ strong{font-weight:bold;}
 article p{margin:1em 0;}
 article ul{margin:1em 0;}article ul li{list-style:inside square;}
 article ol{margin:1em 0;}article ol li{list-style:inside lower-roman;}
+.cf:before,.cf:after{content:"";display:table;}
+.cf:after{clear:both;}
+.cf{*zoom:1;}

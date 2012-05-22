@@ -1,1 +1,7 @@
-body{color:green;}
+.sizer{max-width:960px;margin:0 auto;}
+header div{max-width:960px;margin:0 auto;}header div h1 a{padding-left:10px;float:left;}
+header div nav ul{padding:15px 5px;float:right;}header div nav ul li{float:left;margin:5px;padding-left:45px;background-size:40px;font-size:1.4em;}
+section#content{max-width:960px;margin:0 auto;}
+article{width:65%;float:left;}
+aside{float:right;width:30%;}
+footer{clear:both;}footer div{max-width:960px;margin:0 auto;}

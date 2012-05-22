@@ -90,7 +90,6 @@ section#content {
 }
 
 article {
-	float: left;
 	padding: @gutter;
 
 	#crumb {
@@ -112,10 +111,8 @@ article {
 }
 
 aside {
-	color: @livery;
-
 	section {
-		margin: 1em;
+		margin: 10px;
 
 		a {
 			margin: 1em;
@@ -132,7 +129,6 @@ aside {
 }
 
 footer {
-	clear: both;
 	background-color: @livery;
 	color: @livery-text;
 	display: block;
@@ -235,4 +231,22 @@ article {
 			list-style: inside lower-roman;
 		}
 	}
+}
+
+// clearfix
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
 }
