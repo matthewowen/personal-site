@@ -1,0 +1,7 @@
+header div{padding:0 15px;}header div h1 a{padding-left:10px;float:left;font-size:1.5em;}
+header div nav{width:30%;padding:10px;float:right;}header div nav ul{padding:25px 0;}header div nav ul li{float:left;margin:5px 10px 5px 0;padding-left:45px;background-size:40px;font-size:1.4em;}
+section#content{padding:0 15px;}
+article{width:63%;max-width:780px;float:left;}
+aside{float:right;width:30%;padding:10px;}
+footer{clear:both;}footer div{padding:0 15px;}footer div section#about-me{float:right;width:30%;}
+footer div section#posts{width:63%;max-width:780px;}

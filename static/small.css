@@ -1,0 +1,6 @@
+section#content{min-width:280px;}
+header div{min-width:280px;}header div h1 a{font-size:0.75em;padding-left:10px;}
+header div nav ul{border-top:1px solid #dac27c;padding-left:5px;}header div nav ul li{float:left;margin:5px;padding-left:25px;background-size:20px;font-size:1.2em;}
+aside{display:none;}
+footer div{min-width:280px;}
+footer #posts ul li{padding:5px 0;border-bottom:1px dotted #dac27c;}footer #posts ul li span{display:block;}

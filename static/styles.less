@@ -1,22 +1,16 @@
 // RESET
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
 
+// import
+@import url(/static/small.css) screen and (max-width: 480px);
+@import url(/static/mid.css) screen and (max-width: 760px) and (min-width:481px);
+@import url(/static/full.css) screen and (max-width: 1200px) and (min-width:761px);
+@import url(/static/huge.css) screen and (min-width: 1201px);
+
 // variables
 
 	// dimensions
-	@gutter: 5px;
-	@column: 30px;
-	@columns: 24;
-	@chunk: @column + (2 * @gutter);
-	@max-width: @chunk * @columns;
-	@article: @chunk * (@columns / 3 * 2) - (@gutter * 4);
-	@aside: @chunk * (@columns / 3) - (@gutter * 4);
-
-	.sizer {
-		width: @max-width;
-		padding: 0 @gutter;
-		margin: auto;
-	}
+	@gutter: 10px;
 
 	.transition {
 		transition: color 0.3s;
@@ -57,45 +51,22 @@ body {
 header {
 	background-color: @livery;
 	color: @livery-text;
-	height: 4em;
 	display: block;
-
-	div {
-		.sizer
-	}
 
 	h1 {
 		color: @livery-text;
-		padding: 0 (@gutter * 2);
 	}
 
 	a {
-		float: left;
 		color: @livery-text;
 		.transition
 	}
 }
 
 nav {
-	background-color: @livery;
-	color: @livery-text;
-	float: right;
-	height: 4em;
-
-	li {
-		font-size: 1.2em;
-		float: left;
-		padding: 1.2em (@gutter * 2);
-
-		&:last-child {
-			border: none;
-		}
-	}
-
 	.bg {
 		background-repeat: no-repeat;
 		background-position: center left;
-		padding-left: 40px;
 	}
 
 	li#rss {
@@ -116,13 +87,10 @@ nav {
 
 section#content {
 	display: block;
-	.sizer
 }
 
 article {
-	width: @article;
-	float: left;
-	padding: @gutter * 2;
+	padding: @gutter;
 
 	#crumb {
 		font-size: 0.8em;
@@ -143,16 +111,7 @@ article {
 }
 
 aside {
-	width: @aside;
-	float: right;
-	padding: (@gutter * 2) - 2px;
-	border-left: solid 2px @border;
-	color: @livery;
-	display: block;
-
 	section {
-		margin: 1em;
-
 		a {
 			margin: 1em;
 
@@ -168,24 +127,16 @@ aside {
 }
 
 footer {
-	clear: both;
 	background-color: @livery;
 	color: @livery-text;
 	display: block;
-
-	div {
-		.sizer
-	}
 
 	a {
 		color: @livery-text;
 	}
 
 	section#about-me {
-		width: @aside - (@gutter * 4);
-		float: right;
-		padding: @gutter * 2;
-		margin: 0 (@gutter * 2);
+		padding: @gutter;
 
 		p {
 			margin: 0.2em 0;
@@ -193,9 +144,7 @@ footer {
 	}
 
 	section#posts {
-		width: @article;
-		float: left;
-		padding: @gutter * 2;
+		padding: @gutter;
 
 		li {
 			font-family: @secondary-font;
@@ -206,7 +155,7 @@ footer {
 
 			span {
 				font-style: normal;
-				padding-right: @gutter * 2;
+				padding-right: @gutter;
 			}
 		}
 	}
@@ -280,4 +229,22 @@ article {
 			list-style: inside lower-roman;
 		}
 	}
+}
+
+// clearfix
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom:1;
 }
