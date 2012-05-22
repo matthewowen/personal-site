@@ -20,15 +20,19 @@ legend{color:#000000;}
 .transition{transition:color 0.3s;-webkit-transition:color 0.3s;-o-transition:color 0.3s;}.transition:hover{color:#ceac41;transition:color 0.3s;-webkit-transition:color 0.3s;-o-transition:color 0.3s;}
 html{background-color:#efdec2;}
 body{color:#000000;font-family:'Gill Sans','Gill Sans MT','Gill Sans W01 Medium',sans-serif;}
-header{background-color:#a8651e;color:#dac27c;height:4em;display:block;}header h1{color:#dac27c;padding:0 10px;}
-header a{float:left;color:#dac27c;transition:color 0.3s;-webkit-transition:color 0.3s;-o-transition:color 0.3s;}header a:hover{color:#ceac41;transition:color 0.3s;-webkit-transition:color 0.3s;-o-transition:color 0.3s;}
+header{background-color:#a8651e;color:#dac27c;display:block;}header h1{color:#dac27c;}
+header a{color:#dac27c;transition:color 0.3s;-webkit-transition:color 0.3s;-o-transition:color 0.3s;}header a:hover{color:#ceac41;transition:color 0.3s;-webkit-transition:color 0.3s;-o-transition:color 0.3s;}
+nav .bg{background-repeat:no-repeat;background-position:center left;}
+nav li#rss{background-image:url(/static/img/rss.png);background-repeat:no-repeat;background-position:center left;}
+nav li#twitter{background-image:url(/static/img/twitter.png);background-repeat:no-repeat;background-position:center left;}
+nav li#github{background-image:url(/static/img/github.png);background-repeat:no-repeat;background-position:center left;}
 section#content{display:block;}
 article{float:left;padding:10px;}article #crumb{font-size:0.8em;}
 #index .post{border-bottom:1px solid #A8651E;margin-bottom:2em;}#index .post .comment-count{margin-bottom:0.5em;display:block;margin-top:-0.5em;}
-aside{color:#a8651e;display:block;}aside section{margin:1em;}aside section a{margin:1em;}aside section a h4{text-decoration:underline;}
+aside{color:#a8651e;}aside section{margin:1em;}aside section a{margin:1em;}aside section a h4{text-decoration:underline;}
 aside section a p{font-family:'Gill Sans','Gill Sans MT',sans-serif;}
 footer{clear:both;background-color:#a8651e;color:#dac27c;display:block;}footer a{color:#dac27c;}
-footer section#about-me{padding:10px;margin:0 10px;}footer section#about-me p{margin:0.2em 0;}
+footer section#about-me{padding:10px;}footer section#about-me p{margin:0.2em 0;}
 footer section#posts{padding:10px;}footer section#posts li{font-family:Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}footer section#posts li a{text-decoration:underline;}
 footer section#posts li span{font-style:normal;padding-right:10px;}
 div.clear{clear:both;}

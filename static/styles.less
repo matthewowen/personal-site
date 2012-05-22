@@ -12,11 +12,6 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	// dimensions
 	@gutter: 10px;
 
-	/*.sizer {
-		padding: 0 @gutter;
-		margin: auto;
-	}*/
-
 	.transition {
 		transition: color 0.3s;
 		-webkit-transition: color 0.3s;
@@ -56,41 +51,22 @@ body {
 header {
 	background-color: @livery;
 	color: @livery-text;
-	height: 4em;
 	display: block;
 
 	h1 {
 		color: @livery-text;
-		padding: 0 (@gutter);
 	}
 
 	a {
-		float: left;
 		color: @livery-text;
 		.transition
 	}
 }
 
-/*nav {
-	background-color: @livery;
-	color: @livery-text;
-	float: right;
-	height: 4em;
-
-	li {
-		font-size: 1.2em;
-		float: left;
-		padding: 1.2em (@gutter * 2);
-
-		&:last-child {
-			border: none;
-		}
-	}
-
+nav {
 	.bg {
 		background-repeat: no-repeat;
 		background-position: center left;
-		padding-left: 40px;
 	}
 
 	li#rss {
@@ -107,7 +83,7 @@ header {
 		background-image: url(/static/img/github.png);
 		.bg
 	}
-}*/
+}
 
 section#content {
 	display: block;
@@ -136,12 +112,7 @@ article {
 }
 
 aside {
-	//width: @aside;
-	//float: right;
-	//padding: (@gutter * 2) - 2px;
-	//border-left: solid 2px @border;
 	color: @livery;
-	display: block;
 
 	section {
 		margin: 1em;
@@ -171,9 +142,7 @@ footer {
 	}
 
 	section#about-me {
-		//float: right;
 		padding: @gutter;
-		margin: 0 (@gutter);
 
 		p {
 			margin: 0.2em 0;
@@ -181,8 +150,6 @@ footer {
 	}
 
 	section#posts {
-		//width: @article;
-		//float: left;
 		padding: @gutter;
 
 		li {

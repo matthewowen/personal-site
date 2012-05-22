@@ -1,3 +1,41 @@
-body {
-    color: blue;
+@minwidth: 280px;
+@gutter: 10px;
+@body: #EFDEC2;
+@livery: #A8651E;
+@border: #D7AF72;
+@text: black;
+@hover: #CEAC41;
+@livery-text: #DAC27C;
+
+header div {
+    min-width: @minwidth;
+
+    h1 a {
+        padding-left: @gutter;
+    }
+
+    nav ul {
+        border-top: 1px solid @livery-text;
+        padding-left: 5px;
+
+        li {
+            float: left;
+            margin: 5px;
+            padding-left: 35px;
+            background-size: 30px;
+            font-size: 1.4em;
+        }
+    }
+}
+
+aside {
+    float: right;
+    width: 30%;
+}
+
+footer {
+    div {
+        float: left;
+        width: 30%;
+    }
 }
