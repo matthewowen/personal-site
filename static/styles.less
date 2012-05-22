@@ -1,22 +1,21 @@
 // RESET
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
 
+// import
+@import url(/static/small.css) screen and (max-width: 480px);
+@import url(/static/mid.css) screen and (max-width: 800px) and (min-width:481px);
+@import url(/static/full.css) screen and (max-width: 1024px) and (min-width:801px);
+@import url(/static/huge.css) screen and (min-width: 1200px);
+
 // variables
 
 	// dimensions
-	@gutter: 5px;
-	@column: 30px;
-	@columns: 24;
-	@chunk: @column + (2 * @gutter);
-	@max-width: @chunk * @columns;
-	@article: @chunk * (@columns / 3 * 2) - (@gutter * 4);
-	@aside: @chunk * (@columns / 3) - (@gutter * 4);
+	@gutter: 10px;
 
-	.sizer {
-		width: @max-width;
+	/*.sizer {
 		padding: 0 @gutter;
 		margin: auto;
-	}
+	}*/
 
 	.transition {
 		transition: color 0.3s;
@@ -60,13 +59,9 @@ header {
 	height: 4em;
 	display: block;
 
-	div {
-		.sizer
-	}
-
 	h1 {
 		color: @livery-text;
-		padding: 0 (@gutter * 2);
+		padding: 0 (@gutter);
 	}
 
 	a {
@@ -76,7 +71,7 @@ header {
 	}
 }
 
-nav {
+/*nav {
 	background-color: @livery;
 	color: @livery-text;
 	float: right;
@@ -112,17 +107,15 @@ nav {
 		background-image: url(/static/img/github.png);
 		.bg
 	}
-}
+}*/
 
 section#content {
 	display: block;
-	.sizer
 }
 
 article {
-	width: @article;
 	float: left;
-	padding: @gutter * 2;
+	padding: @gutter;
 
 	#crumb {
 		font-size: 0.8em;
@@ -143,10 +136,10 @@ article {
 }
 
 aside {
-	width: @aside;
-	float: right;
-	padding: (@gutter * 2) - 2px;
-	border-left: solid 2px @border;
+	//width: @aside;
+	//float: right;
+	//padding: (@gutter * 2) - 2px;
+	//border-left: solid 2px @border;
 	color: @livery;
 	display: block;
 
@@ -173,19 +166,14 @@ footer {
 	color: @livery-text;
 	display: block;
 
-	div {
-		.sizer
-	}
-
 	a {
 		color: @livery-text;
 	}
 
 	section#about-me {
-		width: @aside - (@gutter * 4);
-		float: right;
-		padding: @gutter * 2;
-		margin: 0 (@gutter * 2);
+		//float: right;
+		padding: @gutter;
+		margin: 0 (@gutter);
 
 		p {
 			margin: 0.2em 0;
@@ -193,9 +181,9 @@ footer {
 	}
 
 	section#posts {
-		width: @article;
-		float: left;
-		padding: @gutter * 2;
+		//width: @article;
+		//float: left;
+		padding: @gutter;
 
 		li {
 			font-family: @secondary-font;
@@ -206,7 +194,7 @@ footer {
 
 			span {
 				font-style: normal;
-				padding-right: @gutter * 2;
+				padding-right: @gutter;
 			}
 		}
 	}
