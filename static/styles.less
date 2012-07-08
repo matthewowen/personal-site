@@ -29,7 +29,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	@body: #EFDEC2;
 	@livery: #A8651E;
 	@border: #D7AF72;
-	@text: black;
+	@text: #232323;
 	@hover: #CEAC41;
 	@livery-text: #DAC27C;
 
@@ -111,17 +111,19 @@ article {
 }
 
 aside {
-	section {
-		a {
-			margin: 1em;
+    h3 {
+        color: @livery;
+        padding-bottom: 10px;
+    }
+	a {
+		margin: 1em;
 
-			h4 {
-				text-decoration: underline;
-			}
+		h4 {
+			text-decoration: underline;
+		}
 
-			p {
-				font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-			}
+		p {
+			font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 		}
 	}
 }
