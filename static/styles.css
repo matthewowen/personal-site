@@ -19,20 +19,14 @@ body{color:#232323;font-family:'Lusitana','Gill Sans','Gill Sans MT','Gill Sans 
 header{padding:10px;}
 nav{padding-top:10px;}nav li{width:40px;height:33px;margin-right:10px;overflow:hidden;text-indent:-999px;display:inline-block;opacity:0.5;transition:opacity 0.5s;-webkit-transition:opacity 0.5s;-o-transition:opacity 0.5s;}nav li:hover{opacity:1;}
 nav li a{display:block;height:100%;width:100%;}
-nav li.twitter{background-image:url("/static/img/twitter.png");}
-nav li.rss{background-image:url("/static/img/rss.png");}
-nav li.github{background-image:url("/static/img/github.png");}
-nav li.email{background-image:url("/static/img/email.png");}
+nav .twitter{background-image:url("/static/img/twitter.png");}
+nav .rss{background-image:url("/static/img/rss.png");}
+nav .github{background-image:url("/static/img/github.png");}
+nav .email{background-image:url("/static/img/email.png");}
 .content{display:block;}
 article{padding:10px;}
 .summary{font-size:1.2em;margin-top:5px;}
-.sidebar-projects a{color:#232323;}
-.sidebar-projects h3{padding-bottom:10px;}
-.sidebar-projects a{margin:1em;}.sidebar-projects a h4{text-decoration:underline;}
-.sidebar-projects a p{font-family:'Gill Sans','Gill Sans MT',sans-serif;}
 .about-me{padding:10px;}.about-me p{margin:0.2em 0;}
-.posts{padding:10px;}.posts li{font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}.posts li a{text-decoration:underline;}
-.posts li span{font-style:normal;padding-right:10px;}
 h1{font-size:2em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
 h2{font-size:2em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
 h3{font-size:1.5em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
@@ -44,6 +38,8 @@ strong{font-weight:bold;}
 article p{margin:1em 0;}
 article ul{margin:1em 0;}article ul li{list-style:inside square;}
 article ol{margin:1em 0;}article ol li{list-style:inside lower-roman;}
+article a{color:#109c95;transition:color 0.5s;-webkit-transition:color 0.5s;-o-transition:color 0.5s;}article a:hover{color:#095b57;}
+.index a{color:#232323;}
 .cf:before,.cf:after{content:"";display:table;}
 .cf:after{clear:both;}
 .cf{*zoom:1;}

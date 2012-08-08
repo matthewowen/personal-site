@@ -70,19 +70,19 @@ nav {
         width: 100%;
     }
 
-    li.twitter {
+    .twitter {
         background-image: url("/static/img/twitter.png");
     }
 
-    li.rss {
+    .rss {
         background-image: url("/static/img/rss.png");
     }
 
-    li.github {
+    .github {
         background-image: url("/static/img/github.png");
     }
 
-    li.email {
+    .email {
         background-image: url("/static/img/email.png");
     }
 }
@@ -105,23 +105,6 @@ article {
 
 	p {
 		margin: 0.2em 0;
-	}
-}
-
-.posts {
-	padding: @gutter;
-
-	li {
-		font-family: @secondary-font;
-
-		a {
-			text-decoration: underline;
-		}
-
-		span {
-			font-style: normal;
-			padding-right: @gutter;
-		}
 	}
 }
 
@@ -157,7 +140,7 @@ h5 {
 a {
 	color: @black;
 	text-decoration: none;
-	.transition
+	.transition;
 }
 
 em {
@@ -189,6 +172,18 @@ article {
 			list-style: inside lower-roman;
 		}
 	}
+
+    a {
+        color: @lightcolor;
+        .transition;
+    }
+}
+
+.index {
+    a {
+        // don't want link color on the index page
+        color: @black;
+    }
 }
 
 // clearfix
