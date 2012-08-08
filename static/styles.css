@@ -15,7 +15,7 @@ input,textarea,select{*font-size:100%;}
 legend{color:#000000;}
 .transition{transition:color 0.5s;-webkit-transition:color 0.5s;-o-transition:color 0.5s;}.transition:hover{color:#095b57;}
 html{background-color:#ffffff;}
-body{color:#232323;font-family:'Lusitana','Gill Sans','Gill Sans MT','Gill Sans W01 Medium',sans-serif;line-height:1.5;}
+body{color:#232323;font-family:'Lusitana',Serif;line-height:1.5;}
 header{padding:10px;}
 nav{padding-top:10px;}nav li{width:40px;height:33px;margin-right:10px;overflow:hidden;text-indent:-999px;display:inline-block;opacity:0.5;transition:opacity 0.5s;-webkit-transition:opacity 0.5s;-o-transition:opacity 0.5s;}nav li:hover{opacity:1;}
 nav li a{display:block;height:100%;width:100%;}
@@ -27,11 +27,11 @@ nav .email{background-image:url("/static/img/email.png");}
 article{padding:10px;}
 .summary{font-size:1.2em;margin-top:5px;}
 .about-me{padding:10px;}.about-me p{margin:0.2em 0;}
-h1{font-size:2em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
-h2{font-size:2em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
-h3{font-size:1.5em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
-h4{font-size:1.2em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
-h5{font-size:1em;font-family:'Open Sans',Futura-Medium,Futura W01 Medium,Futura,Arial,Sans-Serif;}
+h1{font-size:2em;font-family:'Open Sans',Sans-Serif;}
+h2{font-size:2em;font-family:'Open Sans',Sans-Serif;}
+h3{font-size:1.5em;font-family:'Open Sans',Sans-Serif;}
+h4{font-size:1.2em;font-family:'Open Sans',Sans-Serif;}
+h5{font-size:1em;font-family:'Open Sans',Sans-Serif;}
 a{color:#232323;text-decoration:none;transition:color 0.5s;-webkit-transition:color 0.5s;-o-transition:color 0.5s;}a:hover{color:#095b57;}
 em{font-style:italic;}
 strong{font-weight:bold;}
