@@ -1,176 +1,150 @@
 // RESET
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
 
-// import
-@import url(/static/small.css) screen and (max-width: 480px);
-@import url(/static/mid.css) screen and (max-width: 760px) and (min-width:481px);
-@import url(/static/full.css) screen and (max-width: 1200px) and (min-width:761px);
-@import url(/static/huge.css) screen and (min-width: 1201px);
-
 // variables
 
 	// dimensions
 	@gutter: 10px;
 
 	.transition {
-		transition: color 0.3s;
-		-webkit-transition: color 0.3s;
-		-o-transition: color 0.3s;
+		transition: color 0.5s;
+		-webkit-transition: color 0.5s;
+		-o-transition: color 0.5s;
 
 		&:hover {
-			color: @hover;
-			transition: color 0.3s;
-			-webkit-transition: color 0.3s;
-			-o-transition: color 0.3s;
+			color: @color;
 		}
 	}
 
 	// colours
-	@body: #FFFFE0;
-	@livery: #A8651E;
-	@border: #D7AF72;
-	@text: #232323;
-	@hover: #CEAC41;
-	@livery-text: #DAC27C;
+    @color: #095B57;
+    @darkcolor: #042625;
+    @lightcolor: #109C95;
+    @black: #232323;
+    @white: white;
 
     // fonts
-    @main-font: 'Gill Sans', 'Gill Sans MT', 'Gill Sans W01 Medium', sans-serif;
-    @secondary-font: Futura-Medium, Futura W01 Medium, Futura, Arial, Sans-Serif;
+    @main-font: 'Lusitana', 'Gill Sans', 'Gill Sans MT', 'Gill Sans W01 Medium', sans-serif;
+    @secondary-font: 'Open Sans', Futura-Medium, Futura W01 Medium, Futura, Arial, Sans-Serif;
 
 // structure
 
 html {
-	background-color: @body;
+	background-color: @white;
 }
 
 body {
-	color: @text;
+	color: @black;
 	font-family: @main-font;
+    line-height: 1.5;
 }
 
 header {
-	background-color: @livery;
-	color: @livery-text;
-	display: block;
-
-	h1 {
-		color: @livery-text;
-	}
-
-	a {
-		color: @livery-text;
-		.transition
-	}
+    padding: @gutter;
 }
 
 nav {
-	.bg {
-		background-repeat: no-repeat;
-		background-position: center left;
-	}
 
-	li#rss {
-		background-image: url(/static/img/rss.png);
-		.bg
-	}
+    padding-top: 10px;
 
-	li#twitter {
-		background-image: url(/static/img/twitter.png);
-		.bg
-	}
+    li {
+        width: 40px;
+        height: 33px;
+        margin-right: 10px;
+        overflow: hidden;
+        text-indent: -999px;
+        display: inline-block;
+        opacity: 0.5;
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
 
-	li#github {
-		background-image: url(/static/img/github.png);
-		.bg
-	}
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    li.twitter {
+        background-image: url("/static/img/twitter.png");
+    }
+
+    li.rss {
+        background-image: url("/static/img/rss.png");
+    }
+
+    li.github {
+        background-image: url("/static/img/github.png");
+    }
+
+    li.email {
+        background-image: url("/static/img/email.png");
+    }
 }
 
-section#content {
+.content {
 	display: block;
 }
 
 article {
 	padding: @gutter;
-
-	#crumb {
-		font-size: 0.8em;
-	}
 }
 
-#index {
-	.post {
-		border-bottom: 1px solid #A8651E;
-		margin-bottom: 2em;
-
-		.comment-count {
-			margin-bottom: 0.5em;
-			display: block;
-			margin-top: -0.5em;
-		}
-	}
+.summary {
+    font-size: 1.2em;
+    margin-top: 5px;
 }
 
-aside {
+.sidebar-projects {
+    a {
+        color: @black;
+    }
+
     h3 {
-        color: @livery;
         padding-bottom: 10px;
     }
-	a {
-		margin: 1em;
+    
+    a {
+        margin: 1em;
 
-		h4 {
+        h4 {
+            text-decoration: underline;
+        }
+
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+        }
+    }
+}
+
+.about-me {
+	padding: @gutter;
+
+	p {
+		margin: 0.2em 0;
+	}
+}
+
+.posts {
+	padding: @gutter;
+
+	li {
+		font-family: @secondary-font;
+
+		a {
 			text-decoration: underline;
 		}
 
-		p {
-			font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+		span {
+			font-style: normal;
+			padding-right: @gutter;
 		}
 	}
-}
-
-footer {
-	background-color: @livery;
-	color: @livery-text;
-	display: block;
-
-	a {
-		color: @livery-text;
-	}
-
-	section#about-me {
-		padding: @gutter;
-
-		p {
-			margin: 0.2em 0;
-		}
-	}
-
-	section#posts {
-		padding: @gutter;
-
-		li {
-			font-family: @secondary-font;
-
-			a {
-				text-decoration: underline;
-			}
-
-			span {
-				font-style: normal;
-				padding-right: @gutter;
-			}
-		}
-	}
-}
-
-div.clear {
-	clear: both;
 }
 
 // headings
 
 h1 {
-	font-size: 3em;
+	font-size: 2em;
 	font-family: @secondary-font;
 }
 
@@ -197,7 +171,7 @@ h5 {
 // text and lists 
 
 a {
-	color: @livery;
+	color: @black;
 	text-decoration: none;
 	.transition
 }
@@ -249,4 +223,50 @@ article {
 /* For IE 6/7 (trigger hasLayout) */
 .cf {
     *zoom:1;
+}
+
+// media queries
+
+@media screen and (min-width:761px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 260px;
+        height: 100%;
+
+        div {
+            position: absolute;
+            bottom: 100px;
+        }
+    }
+
+    .content {
+        padding: @gutter;
+        margin-left: @gutter*3;
+        max-width: 600px;
+        margin-right: 310px;
+    }
+
+    .crumb {
+        margin-left: -@gutter*2;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    header {
+        width: 360px;
+        div {
+            right: 100px;
+        }
+    }
+
+    .content {
+        padding: @gutter;
+        margin-left: @gutter*3;
+        max-width: 750px;
+        margin-right: 410px;
+    }
 }

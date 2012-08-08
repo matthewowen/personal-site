@@ -3,6 +3,8 @@
 	<meta charset="utf-8">
 	<title>{{ page.title }} | Matthew Owen</title>
 	<meta name="author" content="Matthew Owen">
+    <link href='http://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
 	<link href="/static/styles.css" rel="stylesheet" media="screen" type="text/css">
     <meta name="viewport" content="width=device-width" />  
 	<!--[if lt IE 9]>
@@ -25,98 +27,23 @@
 
 <body>
 	<header>
-		<div class="cf">
+		<div>
 			<h1><a href="/">matthew owen</a></h1>
-			<nav class="cf">
+            <p>Makes useful things that you use on the internet</p>
+			<nav>
 				<ul>
-					<li id="twitter"><a href="http://twitter.com/_mattowen">Twitter</a></li>
-					<li id="github"><a href="https://github.com/matthewowen">GitHub</a></li>
-					<li id="rss"><a href="/atom.xml">RSS</a></li>
+					<li class="twitter"><a href="http://twitter.com/_mattowen">Twitter</a></li>
+					<li class="github"><a href="https://github.com/matthewowen">GitHub</a></li>
+                    <li class="email"><a href="mailto:matthew.owen95@gmail.com">Email</a></li>
+					<li class="rss"><a href="/atom.xml">RSS</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<section id="content">
+	<section class="content">
 			{{ content }}
-		<aside>
-			<section id="sidebar-projects">
-				<h3>My Projects</h3>
-				<ul>
-                    <li>
-                        <a title="San Francisco Muni times" href="http://www.sftransit.us">
-                            <h4>SFTransit</h4>
-                            <p>Live Muni times for nearby stops, easily found on your smartphone</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a title="Jekyll Slideshow" href="https://github.com/matthewowen/jekyll-slideshow">
-                            <h4>Jekyll Slideshow</h4>
-                            <p>Easily create slideshows on your Jekyll/Octopress site, including all the JavaScript, CSS, and thumbnail generation you need.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a title="Jekyll Mapping" href="https://github.com/matthewowen/jekyll-mapping">
-                            <h4>Jekyll Mapping</h4>
-                            <p>Easily embed maps on Jekyll sites</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a title="listToLight" href="https://github.com/matthewowen/listtolight">
-                            <h4>listToLight</h4>
-                            <p>JavaScript slideshows without any of the usual cruft.</p>
-                        </a>
-                    </li>
-					<li>
-						<a title="Oxford bus times" href="http://www.oxbus.co.uk">
-							<h4>OxBus</h4>
-							<p>Live Oxfordshire bus times on your smartphone</p>
-						</a>
-					</li>
-                    <li>
-                        <a title="Auto retweeting Twitter networks" href="http://www.tweetswarm.net">
-                            <h4>TweetSwarm</h4>
-                            <p>Build auto retweeting networks of Twitter accounts, preferably for good and not evil</p>
-                        </a>
-                    </li>
-					<li>
-						<a title="London bus and tube times" href="http://www.londongo.net">
-							<h4>LondonGo</h4>
-							<p>Easily find out when your next London bus or tube is, right from your smartphone</p>
-						</a>
-					</li>
-                    <li>
-                        <a title="ACIS live bus times scraper API for Python" href="http://pypi.python.org/pypi/BusScraper/">
-                            <h4>BusScraper</h4>
-                            <p>A Python package to make it easy to scrape bus times from ACIS live systems.</p>
-                        </a>
-                    </li>
-				</ul>
-			</section>
-		</aside>
-
 	</section>
-
-	<footer class="cf">
-		<div>
-			<section id="about-me">
-				<h3><a title="Matthew Owen" href="/about">About me</a></h3>
-				<p>Tech enthusiast: interested in Python, JavaScript, mobile web, geolocation, and how web technologies can improve interactions with physical services.</p>
-				<a title="Matthew Owen" href="/about">Read more...</a>
-			</section>
-
-			<section id="posts">
-				<h3>Archive</h3>
-				<ul>
-					{% for post in site.posts limit:5 %}
-					<li><span>{{ post.date | date_to_string }}:</span><a href="{{ post.url }}">{{ post.title }}</a></li>
-					{% endfor %}
-				</ul>
-                <h4><a title="See all posts" href="/archive">See all posts</a></h4>
-			</section>
-		</div>
-		<div class='clear'></div>
-	</footer>
 <script type="text/javascript">
     var disqus_shortname = 'matthewowen';
     (function () {
