@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Matthew Owen</title>
- <link href="http://wwww.matthewowen.com/atom.xml" rel="self"/>
- <link href="http://www.matthewowen.com"/>
+ <link href="http://wwww.matthew-owen.com/atom.xml" rel="self"/>
+ <link href="http://www.matthew-owen.com"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://www.matthewowen.com</id>
+ <id>http://www.matthew-owen.com</id>
  <author>
    <name>Matthew Owen</name>
  </author>
@@ -16,9 +16,9 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://www.matthewowen.com/{{ post.url }}"/>
+   <link href="http://www.matthew-owen.com/{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://www.matthewowen.com{{ post.id }}</id>
+   <id>http://www.matthew-owen.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
