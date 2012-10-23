@@ -4,7 +4,7 @@ title: Killing Reddit?
 date: 2012-10-12T15:00:00.1Z
 ---
 
-As you may be aware, there's [a bit shitstorm going on at Reddit](http://gawker.com/5950981/unmasking-reddits-violentacrez-the-biggest-troll-on-the-web). Predictably, many Redditors are up in arms about the 'doxxing' of violentacrez.
+As you may be aware, there's [a bit of a shitstorm going on at Reddit](http://gawker.com/5950981/unmasking-reddits-violentacrez-the-biggest-troll-on-the-web). Predictably, many Redditors are up in arms about the 'doxxing' of violentacrez.
 
 I find this to be a remarkable bit of cognitive dissonance. Let's be clear - if you condone putting sexualised images of unconsenting people on the internet, you can have no expectation to not be doxxed. Putting this content out has [real world ramifications](http://www.guardian.co.uk/media/greenslade/2010/may/11/pcc-privacy). The exact same arguments that are made for why this content is acceptable (either that "people can't have an expectation of privacy in a public place" or that "if you can find it on the internet, it is your fault for letting it get on the internet") can be made for doxxing being acceptable (if you want to hide your identity, you shouldn't have made it possible for people to identify you).
 

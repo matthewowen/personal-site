@@ -21,7 +21,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
     @darkcolor: #042625;
     @lightcolor: #109C95;
     @black: #232323;
-    @white: white;
+    @white: #fefefe;
 
     // fonts
     @main-font: 'Lusitana', Serif;
@@ -113,6 +113,14 @@ article {
 h1 {
 	font-size: 2em;
 	font-family: @secondary-font;
+    color: @color;
+
+    a {
+        color: @color;
+        &:hover {
+            color: @lightcolor;
+        }
+    }
 }
 
 h2 {

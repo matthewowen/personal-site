@@ -5,7 +5,7 @@ date: 2012-06-25T21:00:00.1Z
 summary: For larks and good cheer, I decided to make this site use a fluid, responsive/adaptive (I refuse to acknowledge a meaningful distinction between these terms) layout.
 ---
 
-NOTE: I've since updated the site further, so this article no longer holds entirely true for this site...
+First, a note: since writing this article I've made quite a few updates to this site, which means it no longer holds entirely true...
 
 For larks and good cheer, I decided to make this site use a fluid, responsive/adaptive (I refuse to acknowledge a meaningful distinction between these terms) layout.
 
