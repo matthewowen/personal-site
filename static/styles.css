@@ -168,7 +168,7 @@ article {
   margin: 0.2em 0;
 }
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-family: 'Open Sans', Sans-Serif;
   color: #095b57;
 }
@@ -255,17 +255,18 @@ article a:hover {
     position: fixed;
     top: 0;
     right: 0;
-    width: 260px;
+    width: 250px;
     height: 100%;
   }
   header div {
     position: absolute;
     bottom: 100px;
+    right: 50px;
   }
   .content {
     padding: 10px;
     margin-left: 30px;
-    max-width: 600px;
+    max-width: 650px;
     margin-right: 310px;
   }
   .crumb {
@@ -274,16 +275,14 @@ article a:hover {
   }
 }
 @media screen and (min-width: 1100px) {
-  header {
-    width: 360px;
-  }
-  header div {
-    right: 100px;
-  }
   .content {
     padding: 10px;
-    margin-left: 30px;
-    max-width: 750px;
-    margin-right: 410px;
+    margin: auto;
+    max-width: 550px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .content {
+    max-width: 650px;
   }
 }
